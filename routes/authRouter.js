@@ -17,10 +17,6 @@ authRouter.post("/signup", (req, res, next) => {
 
     const newUser = new User(req.body);
 
-    // if(req.body.adminCode === "secretcode"){          //checks to see if user has admin code
-    //     newUser.isAdmin = true;
-    // }
-    //this is where the pre-save hook for bcrypt would fire & hash the password before it saves teh new User on line 26 right below
     newUser.save((err, savedUser) => {
       if (err) {
         res.status(500);

@@ -1,6 +1,6 @@
 import React, {useContext} from "react"
 import { LearnGameContext } from "../context/LearnGameProvider.js"
-// import Modal from "./Modal.js"
+
 
 
 export default function QuestionChoice(props){
@@ -11,7 +11,6 @@ const {
     handleGameAnswerClick
     } = useContext(LearnGameContext)
 
-// const [openModal, setOpenModal] = useState(false)
 
 return(
     <div>
@@ -28,19 +27,6 @@ return(
  
         </div>
 
-        {/* <div>
-        <button onClick={()=>setOpenModal(!openModal)}>Toggle Modal</button>
-
-
-                {!openModal
-                ?
-                null
-                :
-                
-                <Modal/>
-                } 
-
-    </div> */}
     </div>
           
 )}

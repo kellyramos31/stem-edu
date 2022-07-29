@@ -4,8 +4,8 @@ require("dotenv").config();
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const expressJwt = require("express-jwt"); //gatekeeper
-const port = process.env.PORT || 5000;
 const path = require("path");
+const port = process.env.PORT || 5000;
 
 //note: updates to syntax for line above would be {expressjwt} so it's a named import
 //& then would need to change line 26 to match casing -- expressjwt.
@@ -30,9 +30,7 @@ app.use("/auth", require("./routes/authRouter.js"));
 app.use(
   "/api",
   expressJwt({ secret: process.env.SECRET, algorithms: ["HS256"] })
-); //creates req.user(now req.auth) -- ALSO:  algorithms: for express-jwt v6.0.0 & higher: adding an algorithm parameter is now required in addition to the secret.
-//note: expressJwt line above checks to see if token has SECRET that
-//matches the one on the server => for any route beginning with /api;SO--the 3 routes below are protected
+);
 
 app.use("/api/forumpost", require("./routes/forumPostRouter.js"));
 app.use("/api/comment", require("./routes/commentRouter.js"));
