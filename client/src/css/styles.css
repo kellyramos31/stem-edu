@@ -439,7 +439,6 @@ span {
   cursor: pointer;
   border-radius: .25rem;
   background-color: transparent;
-  transform-style: preserve-3d;
   height: 150px;
   transform: rotateY(var(--rotate-y, 0));
   perspective: 1000px;
@@ -825,9 +824,9 @@ select {
   margin: 1% 1%;
 }
 
-.modal-text {
+/* .modal-text {
   z-index: 5;
-}
+} */
 
 .owl {
   position: relative;
@@ -1067,6 +1066,17 @@ select {
 
   .reward-icons {
     font-size: 1.2em;
+  }
+
+  .card.flip,
+  .questionCard.questionFlip {
+    position: relative;
+    z-index: 999;
+  }
+
+  .post-icon,
+  .profile-post-icon {
+    width: 1.5em;
   }
 
 }
