@@ -1071,6 +1071,7 @@ select {
   .card.flip,
   .questionCard.questionFlip {
     --webkit-transform: translate3d(0, 0, 0);  
+    z-index: 1000;
   }
 
   .post-icon,
