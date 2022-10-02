@@ -468,7 +468,6 @@ span {
 .card.flip,
 .questionCard.questionFlip {
   --rotate-y: 180deg;
-  --webkit-transform: translate3d(0, 0, 0);
   z-index: 2;
   width: 120%;
 }
@@ -1074,5 +1073,11 @@ select {
   .profile-post-icon {
     width: 1.5em;
   }
+
+    .card.flip,
+    .questionCard.questionFlip {
+        position: relative;
+        --webkit-transform: translate3d(0, 0, 0);
+    }
 
 }
