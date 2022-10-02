@@ -394,12 +394,12 @@ span {
 .game-container,
 .learn-container {
   width: 90%;
-  margin: 8% auto 15% auto;
+  margin: 8% auto 5% auto;
 }
 
 .flashcard-learn-container {
   gap: 12rem 4rem;
-  margin: -7% 5% 24% 5%;
+  margin: 0 5% 24% 5%;
 }
 
 
