@@ -1051,6 +1051,10 @@ select {
     font-size: 1.0em;
   }
 
+  .top-three-scores {
+    font-size: 0.9em;
+  }
+
   .game-reset-btn,
   .save-game-btn {
     height: 2.5rem;
@@ -1071,7 +1075,7 @@ select {
 
   .post-icon,
   .profile-post-icon {
-    width: 1.5em;
+    width: 1.4em;
   }
 
   .card.flip,
