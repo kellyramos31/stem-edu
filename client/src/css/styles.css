@@ -1070,8 +1070,7 @@ select {
 
   .card.flip,
   .questionCard.questionFlip {
-    position: relative;
-    z-index: 1000 !important;
+    --webkit-transform: translate3d(0, 0, 0);  
   }
 
   .post-icon,
