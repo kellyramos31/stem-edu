@@ -1071,7 +1071,7 @@ select {
   .card.flip,
   .questionCard.questionFlip {
     position: relative;
-    z-index: 999;
+    z-index: 1000 !important;
   }
 
   .post-icon,
