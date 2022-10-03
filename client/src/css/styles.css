@@ -468,9 +468,7 @@ span {
 .card.flip,
 .questionCard.questionFlip {
   --rotate-y: 180deg;
-  --webkit-transform: translate3d(0, 0, 0);
-  z-index: 999;
-  /* z-index: 2; */
+  z-index: 2;
   width: 120%;
 }
 
@@ -1002,6 +1000,7 @@ select {
 
 
   .flashcard-learn-container {
+    transform: translate3d(0, 0, 0);
     margin-top: 25%;
     margin-bottom: 55%;
   }
