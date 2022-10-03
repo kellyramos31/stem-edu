@@ -468,7 +468,9 @@ span {
 .card.flip,
 .questionCard.questionFlip {
   --rotate-y: 180deg;
-  z-index: 2;
+  --webkit-transform: translate3d(0, 0, 0);
+  z-index: 999;
+  /* z-index: 2; */
   width: 120%;
 }
 
@@ -1078,10 +1080,5 @@ select {
     width: 1.4em;
   }
 
-  .card-back,
-  .question-card-back{
-    --webkit-transform: translate3d(0, 0, 0);
-    z-index: 999;
-  }
 
 }
