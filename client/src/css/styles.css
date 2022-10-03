@@ -1078,11 +1078,10 @@ select {
     width: 1.4em;
   }
 
-  .card.flip,
-  .questionCard.questionFlip {
-    position: relative;
+  .card-back,
+  .question-card-back{
     --webkit-transform: translate3d(0, 0, 0);
-    z-index: 1000;
+    z-index: 999;
   }
 
 }
