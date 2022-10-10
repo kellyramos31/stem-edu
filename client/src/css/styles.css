@@ -436,6 +436,7 @@ span {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
   cursor: pointer;
   border-radius: .25rem;
   background-color: transparent;
@@ -500,9 +501,6 @@ span {
   border: 3.5px solid yellowgreen;
 }
 
-.card-front{
-    z-index: 1;
-}
 
 .game-score {
   display: flex;
