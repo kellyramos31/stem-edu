@@ -40,8 +40,8 @@ export default function Auth() {
         src="./images/416387_bird_eyes_night_owl_vision_icon.png"
         alt="owl"
       />
-      <h1 className="app-title">WISE</h1>
-      <h5 className="app-sub-title">Women In STEM Education</h5>
+      <h1 className="app-title">WiSE</h1>
+      <h5 className="app-sub-title">Women in STEM Education</h5>
       {!toggle ? (
         <>
           <AuthForm
