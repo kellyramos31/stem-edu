@@ -494,8 +494,12 @@ span {
   border: 4px solid yellowgreen;
 }
 
+.card-front{
+  z-index: 1;
+}
 
 .card-back {
+  z-index: 2;
   font-size: 75%;
   padding: .5rem;
   margin-top: 42%;
