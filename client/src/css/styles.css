@@ -433,7 +433,7 @@ span {
 }
 
 .card {
-  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1005,6 +1005,7 @@ select {
 
 
   .flashcard-learn-container {
+    transform: translate3d(0, 0, 0);
     /* --webkit-transform: translate3d(0, 0, 0); */
     margin-top: 25%;
     margin-bottom: 55%;
