@@ -59,15 +59,15 @@ app.use((err, req, res, next) => {
   return res.send({ errMsg: err.message });
 });
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 
 //From cyclic docs:  Routes go here
-app.all('*', (req,res) => {
-    res.json({"every thing":"is awesome"})
-})
+// app.all('*', (req,res) => {
+//     res.json({"every thing":"is awesome"})
+// })
 
 
 //prior app.listen with Heroku
