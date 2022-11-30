@@ -78,7 +78,7 @@ app.get("*", (req, res) => {
 
 //From cyclic docs --> Connect to the database before listening
 connectDB().then(() => {
-    app.listen(PORT, () => {
+    app.listen(port, () => {
         console.log("listening for requests");
     })
 })
