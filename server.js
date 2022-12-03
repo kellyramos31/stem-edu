@@ -17,25 +17,25 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 //prior mongoose.connect for Heroku
-// mongoose.connect(
-//   process.env.MONGODB_URI,
-//   {
-//     useNewUrlParser: true,
-//   },
-//   () => console.log("Connected to the DB")
-// );
+mongoose.connect(
+  process.env.MONGODB_URI,
+  {
+    useNewUrlParser: true,
+  },
+  () => console.log("Connected to the DB")
+);
 
 
 //from cyclic docs:
-const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(process.env.MONGO_URI);
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.log(error);
-    process.exit(1);
-  }
-};
+// const connectDB = async () => {
+//   try {
+//     const conn = await mongoose.connect(process.env.MONGO_URI);
+//     console.log(`MongoDB Connected: ${conn.connection.host}`);
+//   } catch (error) {
+//     console.log(error);
+//     process.exit(1);
+//   }
+// };
 
 
 app.use(express.static(path.join(__dirname, "client", "build")));
@@ -71,14 +71,14 @@ app.get("*", (req, res) => {
 
 
 //prior app.listen with Heroku
-// app.listen(port, () => {
-//   console.log("Server is running on local port 5000");
-// });
+app.listen(port, () => {
+  console.log("Server is running on local port 5000");
+});
 
 
 //From cyclic docs --> Connect to the database before listening
-connectDB().then(() => {
-    app.listen(port, () => {
-        console.log("listening for requests");
-    })
-})
+// connectDB().then(() => {
+//     app.listen(port, () => {
+//         console.log("listening for requests");
+//     })
+// })
