@@ -21,10 +21,10 @@ mongoose.connect(
   process.env.MONGODB_URI,
   {
     useNewUrlParser: true,
+    useUnifiedTopology: true, //adding this recommended by render.com logs
   },
   () => console.log("Connected to the DB")
 );
-
 
 //from cyclic docs:
 // const connectDB = async () => {
@@ -36,7 +36,6 @@ mongoose.connect(
 //     process.exit(1);
 //   }
 // };
-
 
 app.use(express.static(path.join(__dirname, "client", "build")));
 
@@ -63,18 +62,15 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-
 //From cyclic docs:  Routes go here
 // app.all('*', (req,res) => {
 //     res.json({"every thing":"is awesome"})
 // })
 
-
 //prior app.listen with Heroku
 app.listen(port, () => {
   console.log("Server is running on local port 5000");
 });
-
 
 //From cyclic docs --> Connect to the database before listening
 // connectDB().then(() => {
